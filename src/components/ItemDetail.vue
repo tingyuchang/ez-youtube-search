@@ -16,8 +16,8 @@ export default {
     props: ['item'],
     computed: {
         videoUrl() {
-            const { itemId } = this.item.id;
-            return `https://www.youtube.com/embed/${itemId}`;
+            const { videoId } = this.item.id;
+            return `https://www.youtube.com/embed/${videoId}`;
         }
     }
 }
