@@ -1,11 +1,12 @@
 <template>
     <div class='col-md-4'>
         <h4>Item list</h4>
-        <ul>
+        <ul class="list-group">
             <ListItem 
                 v-for="item in items"
                 :key="item.etag"
                 :item="item"
+                @itemSelect="onItemSelect"
             />
 
         </ul>
@@ -23,7 +24,11 @@ export default {
     props: {
         items: Array,
     },
-       
+    methods: {
+        onItemSelect(item) {
+            this.$emit("itemSelect", item);
+        },
+    }, 
 }
 </script>>
 
