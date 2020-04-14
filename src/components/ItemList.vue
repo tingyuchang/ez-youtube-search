@@ -1,15 +1,28 @@
 <template>
     <div class='col-md-4'>
-        <h4>this is item list</h4>
-        
+        <h4>Item list</h4>
+        <ul>
+            <ListItem 
+                v-for="item in items"
+                :key="item.etag"
+                :item="item"
+            />
+
+        </ul>
     </div>
 </template>>
 
 <script>
-// import ItemList from './ListItem';
+import ListItem from './ListItem';
 
 export default {
     name: "ItemList",
+    components: {
+        ListItem,
+    },
+    props: {
+        items: Array,
+    },
        
 }
 </script>>
