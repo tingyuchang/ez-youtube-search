@@ -17,7 +17,7 @@ export default {
     computed: {
         videoUrl() {
             const { itemId } = this.item.id;
-            return `https://wwww.youtube.com/embed/${itemId}`;
+            return `https://www.youtube.com/embed/${itemId}`;
         }
     }
 }
